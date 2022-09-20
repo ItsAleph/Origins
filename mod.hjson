@@ -2,7 +2,7 @@ displayName: "Origins"
 name: "origins"
 author: "ItsAleph"
 main: "origins.Origins"
-description: "~Unbound mysteries of Mindustry world~ "
-version: 1.0
+description: "~Unbound mysteries of the Mindustry world~"
+version: 0.1
 minGameVersion: 138
 java: true

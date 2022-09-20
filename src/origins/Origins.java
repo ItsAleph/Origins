@@ -2,16 +2,14 @@ package origins;
 
 import arc.*;
 import arc.util.*;
-import mindustry.*;
-import mindustry.content.*;
 import mindustry.game.EventType.*;
-import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-public class Origins extends Mod{
+import origins.content.*;
 
-    public Origins(){
+public class Origins extends Mod {
+    public Origins() {
         Log.info("Loaded Origins constructor.");
 
         //listen for game load event
@@ -21,15 +19,18 @@ public class Origins extends Mod{
                 BaseDialog dialog = new BaseDialog("Welcome");
                 dialog.cont.add("This mod is super experimental and can break (almost) everything so use it it with caution!").row();
                 dialog.cont.add("It is highly recommended to backup your data somewhere or else you might loose all your progress!").row();
-                dialog.cont.button("I understand", dialog::hide).size(100f, 50f);
+                dialog.cont.button("I understand", dialog::hide).size(300f, 50f);
                 dialog.show();
             });
         });
     }
 
     @Override
-    public void loadContent(){
-        Log.info("Loading some Origins content.");
-    }
+    public void loadContent() {
+        Log.info("Loading Origins content.");
 
+        new OriginBlocks().load();
+
+        Log.info("Loaded Origins content.");
+    }
 }
